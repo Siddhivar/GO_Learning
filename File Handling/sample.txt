@@ -1,2 +1,0 @@
-Go is an open source programming language.
-It makes it easy to build simple, reliable, and efficient software.
