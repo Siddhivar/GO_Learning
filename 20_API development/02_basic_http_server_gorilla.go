@@ -8,15 +8,16 @@ import (
 )
 
 func main() {
-	// Create a new router using Gorilla Mux
-	router := mux.NewRouter()
+	router := mux.NewRouter() //Create a new router using Gorilla Mux
 
-	// Define a route handler for the root URL ("/")
-	router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	router.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) { // refers to the root path of the server.
 		fmt.Fprintln(w, "Hello from Gorilla Mux!")
 	})
 
-	// Start the HTTP server on port 8080 and use the router
 	fmt.Println("Server running at http://localhost:8080")
 	http.ListenAndServe(":8080", router)
+
+	/*OUTPUT-> Server running at http://localhost:8080
+	it means your Go server started successfully and is running, waiting for incoming HTTP requests. */
+
 }
